@@ -604,7 +604,7 @@
         async function loadUsers() {
             try {
                 const { data, error } = await supabase
-                    .from('users')
+                    .from('user')
                     .select('*')
                     .order('created_at', { ascending: false });
 
@@ -727,7 +727,7 @@
 
             try {
                 const { data, error } = await supabase
-                    .from('users')
+                    .from('user')
                     .insert([formData])
                     .select();
 
